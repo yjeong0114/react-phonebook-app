@@ -2,7 +2,7 @@ let token = 'e380ea9d868f0e5a0d484aa743c5532200415729e86b10f1';
 
 export const server_calls = {
     get: async () => {
-        const response = await fetch(`https://phonebookv3.heroxkuapp.com/api/contacts`,{
+        const response = await fetch(`https://phonebookv3.herokuapp.com/api/contacts`,{
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -17,7 +17,7 @@ export const server_calls = {
         return await response.json()
     },
     create: async(data: any = {}) => {
-        const response = await fetch(`https://phonebookv3.heroxkuapp.com/api/contacts`,{
+        const response = await fetch(`https://phonebookv3.herokuapp.com/api/contacts`,{
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -33,7 +33,7 @@ export const server_calls = {
         return await response.json()
 	},
     update: async (id:string, data:any = {}) => {
-        const response = await fetch(`https://phonebookv3.heroxkuapp.com/api/contacts/${id}`, {
+        const response = await fetch(`https://phonebookv3.herokuapp.com/api/contacts/${id}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -43,7 +43,7 @@ export const server_calls = {
         });
     },
     delete: async(id:string) => {
-    const response = await fetch(`https://phonebookv3.heroxkuapp.com/api/contacts/${id}`,{
+    const response = await fetch(`https://phonebookv3.herokuapp.com/api/contacts/${id}`,{
         method: 'DELETE',
         headers: {
             'Content-Type': 'application/json',
